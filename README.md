@@ -1,6 +1,21 @@
+<div align="center">
+
+<img src="shoescanner-logo.png" alt="Shoe Scanner Logo" width="400"/>
+
 # Shoe Scanner
 
-An AI-powered shoe deal finder skill for Claude that automatically scans online retailers for shoes matching your exact preferences.
+**AI-powered shoe deal finder that hunts for you automatically**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![Claude Code](https://img.shields.io/badge/Claude-Code%20Skill-purple.svg)](https://claude.com/claude-code)
+[![Automation](https://img.shields.io/badge/automation-email%20alerts-green.svg)](#automation-set-it-and-forget-it)
+
+[Quick Start](QUICKSTART.md) • [Documentation](#documentation) • [Examples](EXAMPLES.md) • [Automation](automation/README.md)
+
+</div>
+
+---
 
 ## Overview
 
@@ -211,17 +226,56 @@ You can add more retailers by editing the `retailers` array in `settings.json`.
 - **Adjust price**: Lower `maxPrice` during sale seasons for best deals
 - **Review history**: Check `seen-deals.json` to track your findings
 
+## Stats
+
+<div align="center">
+
+| 📊 Metric | Value |
+|-----------|-------|
+| 🎯 **Setup Time** | 2 minutes |
+| 📧 **Email Support** | Gmail, Outlook, custom SMTP |
+| 🌍 **Supported Regions** | UK, US, EU (customizable) |
+| 👟 **Supported Brands** | Any (Nike, Adidas, New Balance, Vans, etc.) |
+| 🔧 **Dependencies** | Zero (Python stdlib only) |
+| 📝 **Configuration** | Interactive or JSON |
+| 🤖 **Automation** | Cron, Task Scheduler |
+| 📦 **Skill Version** | 1.1.0 |
+
+</div>
+
+### Key Features Summary
+
+✅ Interactive first-run setup (no coding required)
+✅ Full automation with email notifications
+✅ Multi-region support (UK/US/EU)
+✅ Duplicate deal prevention
+✅ Beautiful HTML email alerts
+✅ Comprehensive logging
+✅ Zero external dependencies
+✅ Highly customizable
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+### Areas for Contribution
+
+- 🌐 Additional retailer integrations
+- 🎨 Email template improvements
+- 📱 Push notification support (Pushover, Pushbullet)
+- 🔌 Webhook integrations (Slack, Discord)
+- 🌍 More region-specific retailers
+- 📖 Documentation improvements
+
 ## License
 
-MIT
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## Author
 
 Built for Claude Code users who want to automate their shoe deal hunting.
+
+**Maintained by:** [CaptainDarkHeart](https://github.com/CaptainDarkHeart)
 
 ## Documentation
 
