@@ -1,0 +1,18 @@
+# Shoe Scanner Automation Requirements
+#
+# This script uses only Python standard library modules:
+# - os
+# - sys
+# - json
+# - subprocess
+# - smtplib
+# - email
+# - datetime
+# - pathlib
+# - typing
+#
+# Python 3.6+ required
+# No external dependencies needed!
+#
+# To verify your Python version:
+#   python3 --version

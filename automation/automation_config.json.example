@@ -1,0 +1,29 @@
+{
+  "email": {
+    "enabled": true,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_user": "your-email@gmail.com",
+    "smtp_password": "your-app-password",
+    "from_address": "your-email@gmail.com",
+    "to_address": "your-email@gmail.com",
+    "subject": "🔥 New Shoe Deals Found!"
+  },
+  "claude": {
+    "command": "claude",
+    "skill": "shoescanner"
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "~/.claude/skills/shoescanner/automation.log"
+  },
+  "only_email_on_deals": true,
+  "comments": {
+    "email.enabled": "Set to false to disable email notifications",
+    "email.smtp_server": "For Gmail: smtp.gmail.com, Outlook: smtp-mail.outlook.com",
+    "email.smtp_port": "Usually 587 for TLS",
+    "email.smtp_user": "Your email username (often the full email address)",
+    "email.smtp_password": "For Gmail: use App Password, not regular password",
+    "only_email_on_deals": "If true, only send email when new deals found. If false, send status email every run"
+  }
+}

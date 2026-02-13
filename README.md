@@ -11,6 +11,8 @@ Shoe Scanner is a Claude Code skill that helps you find great deals on shoes by 
 ## Features
 
 - 🎤 **Interactive Setup**: First-run guided setup with simple questions - no config file editing required!
+- 🤖 **Full Automation**: Set it and forget it! Run weekly via cron with email notifications
+- 📧 **Email Alerts**: Get notified when new deals are found
 - 🔍 **Smart Filtering**: Automatically filters by brand, size, price, and color
 - 🎯 **Model Targeting**: Specify favorite models and models to avoid
 - 💰 **Price Tracking**: Set maximum price thresholds with shipping included
@@ -102,6 +104,24 @@ The skill will:
 3. Filter by size, price, color, and model preferences
 4. Skip previously seen deals
 5. Report new matches with direct purchase links
+
+### Automation (Set It and Forget It!)
+
+Want to automate your deal hunting? Run the scanner weekly and get email notifications:
+
+```bash
+cd automation
+cp automation_config.json.example automation_config.json
+# Edit with your email settings
+python3 shoescanner_automation.py
+```
+
+Schedule it with cron (weekly on Sundays at 9 AM):
+```bash
+0 9 * * 0 python3 /path/to/shoescanner/automation/shoescanner_automation.py
+```
+
+See [automation/README.md](automation/README.md) for full setup guide.
 
 ## Example Output
 
