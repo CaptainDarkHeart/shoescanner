@@ -1,0 +1,9 @@
+{
+  "name": "shoescanner",
+  "version": "1.0.0",
+  "description": "Scan online retailers for shoes matching your preferences (brand, size, price, color)",
+  "command": "shoescanner",
+  "userInvocable": true,
+  "instructions": "instructions.md",
+  "settings": "settings.json"
+}

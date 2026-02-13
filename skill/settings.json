@@ -1,0 +1,48 @@
+{
+  "manufacturer": "New Balance",
+  "size": "UK 12.5",
+  "maxPrice": 105,
+  "currency": "GBP",
+  "location": "UK",
+  "colorPreferences": {
+    "preferred": ["black", "grey", "dark blue", "dark green"],
+    "accents": ["colorful accents OK", "metallic tones welcome"],
+    "avoid": ["bright/loud colorways", "white-dominant"]
+  },
+  "goodExamples": ["1906", "9060", "1000 series", "574", "530", "550", "2002R", "990", "991"],
+  "modelsToAvoid": ["Fresh Foam"],
+  "retailers": [
+    {
+      "name": "New Balance UK",
+      "url": "https://www.newbalance.co.uk",
+      "regions": ["UK"]
+    },
+    {
+      "name": "Size?",
+      "url": "https://www.size.co.uk",
+      "regions": ["UK"]
+    },
+    {
+      "name": "End Clothing",
+      "url": "https://www.endclothing.com",
+      "regions": ["UK", "EU", "US"]
+    },
+    {
+      "name": "JD Sports",
+      "url": "https://www.jdsports.co.uk",
+      "regions": ["UK"]
+    },
+    {
+      "name": "Foot Locker UK",
+      "url": "https://www.footlocker.co.uk",
+      "regions": ["UK"]
+    },
+    {
+      "name": "Offspring",
+      "url": "https://www.offspring.co.uk",
+      "regions": ["UK"]
+    }
+  ],
+  "seenDealsFile": "~/.claude/skills/shoescanner/seen-deals.json",
+  "includeShipping": true
+}
