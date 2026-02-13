@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# User-specific settings (users should customize their own)
+settings-local.json
+
+# Seen deals (user-specific tracking)
+nb-seen-deals.json
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
