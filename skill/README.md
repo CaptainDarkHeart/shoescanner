@@ -4,6 +4,7 @@ An automated shoe deal finder that scans online retailers for shoes matching you
 
 ## Features
 
+- 🎤 **Interactive Setup**: Guided setup on first run - no config file editing needed!
 - 🔍 **Smart Filtering**: Searches by brand, size, price, and color preferences
 - 🎯 **Model Targeting**: Specify good models and models to avoid
 - 💰 **Price Tracking**: Set a max price threshold (with shipping included)
@@ -22,7 +23,27 @@ Simply invoke the skill:
 /shoescanner
 ```
 
-The skill will scan configured retailers and report any new matches.
+### First Time Setup
+
+On your first run, the skill will guide you through an interactive setup with simple questions:
+
+1. **What shoe brand are you looking for?** (Nike, Adidas, New Balance, etc.)
+2. **What's your shoe size?** (Include region: UK/US/EU)
+3. **Where are you located?** (UK, US, EU)
+4. **What's your maximum budget?**
+5. **What colors do you prefer?** (Optional, multi-select)
+6. **Any specific models?** (Optional - favorites or ones to avoid)
+
+Your preferences are saved automatically - you only set up once!
+
+### After Setup
+
+The skill will:
+- Load your saved preferences
+- Search configured retailers for your region
+- Filter results based on all your criteria
+- Skip previously seen deals
+- Report any new matches with direct links
 
 ## Configuration
 

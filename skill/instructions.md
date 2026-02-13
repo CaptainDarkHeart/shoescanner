@@ -33,9 +33,99 @@ The user's preferences are stored in `settings.json`:
 ## Process
 
 ### 1. Check Configuration
-- Read `settings.json` from the skill directory
-- If key settings are missing, ask the user to configure them
+
+**First, read the settings file** at `~/.claude/skills/shoescanner/settings.json`
+
+**Check if it's the default/unconfigured state** by looking for:
+- If `manufacturer` is still "New Balance" AND `size` is "UK 12.5" - this is likely the default
+- Better: Check for a `configured` field - if it's `false` or missing, treat as unconfigured
+
+**If unconfigured OR if critical fields are missing**, use the AskUserQuestion tool to gather preferences interactively:
+
+1. **Ask about shoe brand and size** (required):
+   ```
+   Question: "What shoe brand are you looking for?"
+   Options:
+   - Nike
+   - Adidas
+   - New Balance
+   - Vans
+   (Other option for custom input)
+
+   Question: "What's your shoe size?"
+   Options:
+   - US 9-11
+   - US 11.5-13
+   - UK 8-10
+   - UK 10.5-12.5
+   - EU 42-44
+   - EU 45-47
+   (Other option for custom size)
+   ```
+
+2. **Ask about location and budget** (required):
+   ```
+   Question: "Where are you located?"
+   Options:
+   - United Kingdom (GBP)
+   - United States (USD)
+   - Europe/EU (EUR)
+   (Other for custom region)
+
+   Question: "What's your maximum price budget?"
+   Options:
+   - Under £75 / $100 / €90
+   - Under £100 / $150 / €120
+   - Under £150 / $200 / €180
+   - Under £200 / $250 / €230
+   (Other for custom amount)
+   ```
+
+3. **Ask about color preferences** (optional but recommended):
+   ```
+   Question: "What colors do you prefer?" (multiSelect: true)
+   Options:
+   - Black
+   - White
+   - Grey/Neutral tones
+   - Navy/Dark blue
+   - Earth tones (brown, tan, olive)
+   - Bold/Bright colors
+   ```
+
+4. **Ask about specific models** (optional):
+   ```
+   Question: "Any specific models you're interested in? (optional)"
+   (This gets free text input from "Other" option)
+
+   Question: "Any models you want to avoid? (optional)"
+   (This gets free text input from "Other" option)
+   ```
+
+**After gathering preferences:**
+- Parse the user's responses into proper format
+- Map responses to settings:
+  - Brand → `manufacturer`
+  - Size (parse to include region prefix) → `size`
+  - Location → `location` and `currency`
+  - Budget → `maxPrice` (extract number)
+  - Colors → `colorPreferences.preferred`
+  - Models interested → `goodExamples`
+  - Models to avoid → `modelsToAvoid`
+- Update the retailers list based on their location
+- Write the updated configuration to `settings.json` using the Edit tool
+- Set `configured: true` in the settings
+- Confirm to the user: "Great! I've saved your preferences. Now searching for [brand] shoes in size [size] under [currency][price]..."
+- Continue with the search using their preferences
 - Expand the `seenDealsFile` path (handle `~` for home directory)
+
+**Important Setup Notes:**
+- Make the setup conversational and friendly
+- If they select "Other", capture their custom input
+- For size, ensure it includes the region (UK/US/EU)
+- For budget, extract the numeric value and set the appropriate currency
+- Save all preferences so they don't have to set up again
+- Let them know they can edit `~/.claude/skills/shoescanner/settings.json` later to refine preferences
 
 ### 2. Search Retailers
 For each retailer matching the user's location:

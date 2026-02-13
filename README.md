@@ -8,12 +8,13 @@ Shoe Scanner is a Claude Code skill that helps you find great deals on shoes by 
 
 ## Features
 
+- 🎤 **Interactive Setup**: First-run guided setup with simple questions - no config file editing required!
 - 🔍 **Smart Filtering**: Automatically filters by brand, size, price, and color
 - 🎯 **Model Targeting**: Specify favorite models and models to avoid
 - 💰 **Price Tracking**: Set maximum price thresholds with shipping included
 - 🌍 **Location-Aware**: Only checks retailers relevant to your region
 - 📋 **Duplicate Prevention**: Tracks previously found deals
-- ⚙️ **Fully Customizable**: Easy JSON configuration
+- ⚙️ **Fully Customizable**: Edit preferences anytime via JSON or re-run setup
 
 ## Installation
 
@@ -79,12 +80,26 @@ Simply invoke the skill in Claude Code:
 /shoescanner
 ```
 
+### First Time? No Problem!
+
+On your first run, the skill will ask you a few simple questions:
+- What brand? (Nike, Adidas, New Balance, etc.)
+- What size? (UK/US/EU sizing)
+- Where are you located?
+- What's your budget?
+- Color preferences? (optional)
+- Any favorite or disliked models? (optional)
+
+Your answers are saved automatically - no config file editing needed!
+
+### How It Works
+
 The skill will:
-1. Load your preferences from `settings.json`
-2. Search configured retailers
-3. Filter results based on your criteria
-4. Check against previously seen deals
-5. Report any new matches
+1. Load your saved preferences (or guide you through setup)
+2. Search configured retailers for your region
+3. Filter by size, price, color, and model preferences
+4. Skip previously seen deals
+5. Report new matches with direct purchase links
 
 ## Example Output
 
