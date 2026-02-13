@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="shoescanner-logo.png" alt="Shoe Scanner Logo" width="400"/>
+<img src="shoescanner-logo.png" alt="Shoe Scanner Logo" width="700"/>
 
 # Shoe Scanner
 
@@ -14,6 +14,20 @@
 [Quick Start](QUICKSTART.md) • [Documentation](#documentation) • [Examples](EXAMPLES.md) • [Automation](automation/README.md)
 
 </div>
+
+---
+
+## 🎉 What's New
+
+**Version 1.1.0** - Full Automation Release!
+
+- ✨ **Interactive Setup** - Answer simple questions, no config editing needed
+- 🤖 **Email Automation** - Get weekly deal alerts automatically
+- 📧 **Beautiful HTML Emails** - Professional formatted notifications
+- 🧪 **Email Testing** - Verify SMTP setup before going live
+- 📊 **Smart Tracking** - Never see the same deal twice
+
+[See all features →](#features)
 
 ---
 
@@ -199,13 +213,31 @@ You can add more retailers by editing the `retailers` array in `settings.json`.
 
 ## How It Works
 
-1. **Loads Configuration**: Reads your preferences from `settings.json`
-2. **Searches Retailers**: Navigates to each retailer's website
-3. **Filters Results**: Applies size, price, and availability filters
-4. **Evaluates Matches**: Checks model names and colorways against your preferences
-5. **Prevents Duplicates**: Compares against `seen-deals.json`
-6. **Reports Findings**: Presents new matches with all relevant details
-7. **Updates History**: Adds new matches to the seen deals file
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  1️⃣  Interactive Setup  →  Set preferences via simple questions  │
+├─────────────────────────────────────────────────────────────────┤
+│  2️⃣  Load Config  →  Read your saved preferences                 │
+├─────────────────────────────────────────────────────────────────┤
+│  3️⃣  Search Retailers  →  Visit configured online stores         │
+├─────────────────────────────────────────────────────────────────┤
+│  4️⃣  Smart Filter  →  Match size, price, color, model           │
+├─────────────────────────────────────────────────────────────────┤
+│  5️⃣  Check Duplicates  →  Skip previously seen deals            │
+├─────────────────────────────────────────────────────────────────┤
+│  6️⃣  Report Results  →  Show/email new matches                  │
+├─────────────────────────────────────────────────────────────────┤
+│  7️⃣  Update History  →  Track for next run                      │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+**Manual Mode:** Run `/shoescanner` anytime to search immediately
+
+**Automation Mode:** Schedule weekly scans + get email notifications automatically
 
 ## Files Structure
 
