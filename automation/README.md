@@ -66,9 +66,23 @@ nano automation_config.json  # or use your preferred editor
 }
 ```
 
-### 3. Test the Script
+### 3. Test Email Configuration
 
-Run it manually first to make sure everything works:
+Test your email settings first (recommended):
+
+```bash
+python3 test_email.py
+```
+
+This will verify your SMTP credentials and send a test email. You should see:
+```
+✅ Test email sent successfully!
+📬 Check your inbox at youremail@gmail.com
+```
+
+### 4. Test the Full Script
+
+Run the automation manually to make sure everything works:
 
 ```bash
 python3 shoescanner_automation.py
@@ -89,7 +103,7 @@ Automation run complete
 ============================================================
 ```
 
-### 4. Schedule It
+### 5. Schedule It
 
 #### On macOS/Linux (using cron)
 

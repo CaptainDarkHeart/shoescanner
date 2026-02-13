@@ -227,6 +227,7 @@ Built for Claude Code users who want to automate their shoe deal hunting.
 
 - 📖 [Quick Start Guide](QUICKSTART.md) - Get up and running in 2 minutes
 - 📦 [Installation Guide](INSTALL.md) - Detailed installation instructions
+- 🤖 [Automation Guide](automation/README.md) - Set up weekly scans with email alerts
 - 💡 [Configuration Examples](EXAMPLES.md) - Real-world user scenarios
 - 🔧 [Skill README](skill/README.md) - Technical documentation
 
