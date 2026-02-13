@@ -6,6 +6,8 @@ An AI-powered shoe deal finder skill for Claude that automatically scans online 
 
 Shoe Scanner is a Claude Code skill that helps you find great deals on shoes by automatically searching multiple retailers and filtering results based on your specific criteria: brand, size, price, color preferences, and model preferences.
 
+**New to Shoe Scanner?** Check out the [Quick Start Guide](QUICKSTART.md) for a 2-minute setup!
+
 ## Features
 
 - 🎤 **Interactive Setup**: First-run guided setup with simple questions - no config file editing required!
@@ -158,6 +160,8 @@ You can add more retailers by editing the `retailers` array in `settings.json`.
 }
 ```
 
+**Want more examples?** See [EXAMPLES.md](EXAMPLES.md) for 6+ real-world configurations!
+
 ## How It Works
 
 1. **Loads Configuration**: Reads your preferences from `settings.json`
@@ -199,6 +203,14 @@ MIT
 
 Built for Claude Code users who want to automate their shoe deal hunting.
 
+## Documentation
+
+- 📖 [Quick Start Guide](QUICKSTART.md) - Get up and running in 2 minutes
+- 📦 [Installation Guide](INSTALL.md) - Detailed installation instructions
+- 💡 [Configuration Examples](EXAMPLES.md) - Real-world user scenarios
+- 🔧 [Skill README](skill/README.md) - Technical documentation
+
 ## Links
 
 - [GitHub Repository](https://github.com/CaptainDarkHeart/shoescanner)
+- [Report Issues](https://github.com/CaptainDarkHeart/shoescanner/issues)
